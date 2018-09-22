@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Artech Co., Ltd.</title>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <style>
   a {
     text-decoration: none;
@@ -19,6 +19,25 @@
     <li><a href="1.html"><strong><font color="blue">재고 현황</font></strong></a></li>
     <li><a href="2.html"><strong><font color="blue">매출 현황</font></strong></a></li>
   </ol>
+  <script language="JavaScript">
+
+  function thisPrint(obj) {
+    window.onafterprint.html=document.body.innerHTML;
+    document.body.innerHTML = obj.outerHTML;
+    window.print();
+  }
+
+  window.onafterprint = function() {
+    if(window.onafterprint.html) {
+      document.body.innerHTML = window.onafterprint.html;
+      window.onafterprint.html = null;
+    }
+  }
+
+  </script>
+  </HEAD>
+  <BODY>
+
+  <img src="111.png" onclick="thisPrint(this);">
 </body>
 </html>
-<a href="javascript:window.print()"><img src="111.png"></a>
