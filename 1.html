@@ -1,38 +1,42 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
   <title>Artech Co., Ltd.</title>
-    <meta charset="utf-8">
-  <style>
-  a {
-    text-decoration: none;
-  }
-  h1 {
-    font-size:45px;
-    text-align: center;
-  }
-</style>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<body>
-  <a href="index.html"><img src="logo.png"></a>
-  <a href="1.html"><font size="5" face="맑은 고딕" color="blue"><재고 현황></font></a>
-  <a href="2.html"><font size="5" face="맑은 고딕" color="blue"><매출 현황></font></a>
-  <script language="JavaScript">
+<body id="target">
+  <div class="center">
+    <header>
+      <h1><a href="index.html">Artech Co., Ltd.</a></h1>
+    </header>
+    <nav>
+      <ol>
+        <li><a href="1.html">Current Stocks</a></li>
+        <li><a href="2.html">Sales Status</a></li>
+      </ol>
+    </nav>
+    <article>
+      <script language="JavaScript">
 
-  function thisPrint(obj) {
-    window.onafterprint.html=document.body.innerHTML;
-    document.body.innerHTML = obj.outerHTML;
-    window.print();
-  }
+      function thisPrint(obj) {
+        window.onafterprint.html=document.body.innerHTML;
+        document.body.innerHTML = obj.outerHTML;
+        window.print();
+      }
 
-  window.onafterprint = function() {
-    if(window.onafterprint.html) {
-      document.body.innerHTML = window.onafterprint.html;
-      window.onafterprint.html = null;
-    }
-  }
-
-  </script>
-  <img src="1.png" onclick="thisPrint(this);">
+      window.onafterprint = function() {
+        if(window.onafterprint.html) {
+          document.body.innerHTML = window.onafterprint.html;
+          window.onafterprint.html = null;
+        }
+      }
+      </script>
+      <div class="center">
+        <img width="500" src="1.png" onclick="thisPrint(this);">
+      </div>
+    </article>
+  </div>
 </body>
 </html>

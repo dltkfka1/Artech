@@ -2,40 +2,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WEB1-html</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Artech Co., Ltd.</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body id="target">
-    <div class="center">
-        <header>
-            <h1><a href="index0.html"><img src="logo.png"></a></h1>
-        </header>
-        <nav>
-            <ol>
-                  <li><a href="1.html">재고 현황</a></li>
-                  <li><a href="2.html">매출 현황</a></li>
-            </ol>
-        </nav>
-                <article>
-                  <script language="JavaScript">
+  <div class="center">
+    <header>
+      <h1><a href="index.html">Artech Co., Ltd.</a></h1>
+    </header>
+    <nav>
+      <ol>
+        <li><a href="1.html">Current Stocks</a></li>
+        <li><a href="2.html">Sales Status</a></li>
+      </ol>
+    </nav>
+    <article>
+      <script language="JavaScript">
 
-                  function thisPrint(obj) {
-                    window.onafterprint.html=document.body.innerHTML;
-                    document.body.innerHTML = obj.outerHTML;
-                    window.print();
-                  }
+      function thisPrint(obj) {
+        window.onafterprint.html=document.body.innerHTML;
+        document.body.innerHTML = obj.outerHTML;
+        window.print();
+      }
 
-                  window.onafterprint = function() {
-                    if(window.onafterprint.html) {
-                      document.body.innerHTML = window.onafterprint.html;
-                      window.onafterprint.html = null;
-                    }
-                  }
-
-                  </script>
-            <div class="center"><h2><img width=1200 heiget=800 src="2.png" onclick="thisPrint(this);"></h2></div>
-        </article>
-    </div>
+      window.onafterprint = function() {
+        if(window.onafterprint.html) {
+          document.body.innerHTML = window.onafterprint.html;
+          window.onafterprint.html = null;
+        }
+      }
+      </script>
+      <div class="center">
+        <img width="1200" src="2.png" onclick="thisPrint(this);">
+      </div>
+    </article>
+  </div>
 </body>
 </html>
