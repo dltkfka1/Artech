@@ -1,42 +1,41 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Artech Co., Ltd.</title>
-  <meta charset="utf-8">
-  <style>
-  a {
-    text-decoration: none;
-  }
-  h1 {
-    font-size:45px;
-    text-align: center;
-  }
-</style>
+    <title>WEB1-html</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<body>
-  <a href="index.html"><img src="logo.png"></a>
-  <ol>
-    <li><a href="1.html"><strong><font color="blue">재고 현황</font></strong></a></li>
-    <li><a href="2.html"><strong><font color="blue">매출 현황</font></strong></a></li>
-  </ol>
-  <script language="JavaScript">
+<body id="target">
+    <div class="center">
+        <header>
+            <h1><a href="index0.html"><img src="logo.png"></a></h1>
+        </header>
+        <nav>
+            <ol>
+                  <li><a href="1.html">재고 현황</a></li>
+                  <li><a href="2.html">매출 현황</a></li>
+            </ol>
+        </nav>
+                <article>
+                  <script language="JavaScript">
 
-  function thisPrint(obj) {
-    window.onafterprint.html=document.body.innerHTML;
-    document.body.innerHTML = obj.outerHTML;
-    window.print();
-  }
+                  function thisPrint(obj) {
+                    window.onafterprint.html=document.body.innerHTML;
+                    document.body.innerHTML = obj.outerHTML;
+                    window.print();
+                  }
 
-  window.onafterprint = function() {
-    if(window.onafterprint.html) {
-      document.body.innerHTML = window.onafterprint.html;
-      window.onafterprint.html = null;
-    }
-  }
+                  window.onafterprint = function() {
+                    if(window.onafterprint.html) {
+                      document.body.innerHTML = window.onafterprint.html;
+                      window.onafterprint.html = null;
+                    }
+                  }
 
-  </script>
-  </HEAD>
-  <BODY>
-  <img width="1200" height="800" src="2.png" onclick="thisPrint(this);">
+                  </script>
+            <div class="center"><h2><img width=1200 heiget=800 src="2.png" onclick="thisPrint(this);"></h2></div>
+        </article>
+    </div>
 </body>
 </html>
