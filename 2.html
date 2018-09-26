@@ -1,44 +1,31 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Artech Co., Ltd.</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body id="target">
-  <div class="center">
-    <header>
-      <img src="logo.png">
-    </header>
-    <nav>
-      <ol>
-        <li><a href="index.html">Main</a></li>
-        <li><a href="0.html">Introduce</a></li>
-        <li><a href="1.html">Current Stocks</a></li>
-        <li><a href="2.html">Sales Status</a></li>
-      </ol>
-    </nav>
-    <article>
-      <script language="JavaScript">
-
-      function thisPrint(obj) {
-        window.onafterprint.html=document.body.innerHTML;
-        document.body.innerHTML = obj.outerHTML;
-        window.print();
-      }
-
-      window.onafterprint = function() {
-        if(window.onafterprint.html) {
-          document.body.innerHTML = window.onafterprint.html;
-          window.onafterprint.html = null;
-        }
-      }
-      </script>
-      <div class="center">
-        <img width="900" height="550" src="2.png" onclick="thisPrint(this);">
-      </div>
-    </article>
-  </div>
-</body>
+    <head>
+        <title>Artech Co., Ltd.</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body id="target">
+        <div class="center">
+            <header>
+                <img src="logo.png">
+            </header>
+            <!-- // header -->
+            <nav>
+                <ol>
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="0.html">Introduce</a></li>
+                    <li><a href="1.html">Current Stocks</a></li>
+                    <li><a href="2.html">Sales Status</a></li>
+                </ol>
+            </nav>
+            <!-- // nav -->
+            <article>
+                <img src="2.png" onclick="thisPrint(this);">
+            </article>
+            <!-- // article -->
+        </div>
+        <!-- // div.center -->
+    </body>
+    <script src="./libs.js"></script>
 </html>

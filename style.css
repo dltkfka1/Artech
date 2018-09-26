@@ -85,8 +85,13 @@ article{
     float:left;
     padding:20px;
     color: #535353;
+    width: 80%;
 }
 
 article h2{
     margin-bottom: 10px;
+}
+
+article img {
+    width: 100%;
 }
