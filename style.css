@@ -86,6 +86,8 @@ article{
     padding:20px;
     color: #535353;
     width: 75%;
+    position: relative;
+    min-height: 400px;
 }
 
 article h2{
