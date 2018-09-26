@@ -26,7 +26,7 @@ nav {
     border-right:1px solid #535353;
     padding-top: 20px;
     padding-left: 20px;
-    width:10%;
+    width:15%;
     height:600px;
     float:left;
 }
@@ -85,7 +85,7 @@ article{
     float:left;
     padding:20px;
     color: #535353;
-    width: 80%;
+    width: 75%;
 }
 
 article h2{
